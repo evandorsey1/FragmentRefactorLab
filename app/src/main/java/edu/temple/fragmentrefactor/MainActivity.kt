@@ -11,6 +11,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val fragment = ActivityFragment()
+
+        // Replaced the fragment with the frame layout's ID in activity_main
+        supportFragmentManager.beginTransaction().replace(R.id.fragContainer, fragment)
+            .commit()
 
 
     }
